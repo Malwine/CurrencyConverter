@@ -6,3 +6,28 @@
 <div>
     <p>Hallo @Model</p>
 </div>
+
+<form>
+    <div>
+        <p>Amount</p>
+        <label><input type="text" name="amount"></label>
+    </div>
+    <div>
+        <label for="original_currency">Original Currency</label>
+        <select id="original_currency" name="original_currency">
+            <option>@Model</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="target_currency">Target Currency</label>
+        <select id="target_currency" name="target_currency">
+            <option></option>
+        </select>
+    </div>
+    <br>
+    <button class="btn btn-primary">Convert</button>
+    <br>
+    <br>
+    <p class="lead"> Converted amount: </p>
+</form>
