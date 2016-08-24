@@ -2,20 +2,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model String
+@model CurrencyConverter.Models.Amount
+
 <div>
-    <p>Hallo @Model</p>
+    <p class="lead">This is a currency conversion app. Please type in your amount and select your currencies.</p>
 </div>
 
-<form>
+<form asp-action="Create" asp-controller="Home">
     <div>
         <p>Amount</p>
-        <label><input type="text" name="amount"></label>
+        <label><input type="text" name="Amount"></label>
     </div>
     <div>
         <label for="original_currency">Original Currency</label>
         <select id="original_currency" name="original_currency">
-            <option>@Model</option>
+            <option></option>
         </select>
     </div>
 
@@ -31,3 +32,6 @@
     <br>
     <p class="lead"> Converted amount: </p>
 </form>
+
+
+<p>@Model.BaseAmount</p>

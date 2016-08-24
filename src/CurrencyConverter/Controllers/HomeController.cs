@@ -10,8 +10,15 @@ namespace CurrencyConverter.Controllers
     {
         public IActionResult Index()
         {
-            var eur = "Andrei";
-            return View("Index", eur);
+            // TODO: find better solution in order to not get a null pointer exception:
+            var model = new CurrencyConverter.Models.Amount(0);
+            return View("Index", model);
+        }
+
+        public IActionResult Create(string Amount)
+        {
+            var model = new CurrencyConverter.Models.Amount(Convert.ToInt32(Amount));
+            return View("Index", model);
         }
 
         public IActionResult About()
