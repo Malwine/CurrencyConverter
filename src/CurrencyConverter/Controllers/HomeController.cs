@@ -18,6 +18,7 @@ namespace CurrencyConverter.Controllers
         public IActionResult Create(string Amount)
         {
             var model = new CurrencyConverter.Models.Amount(Convert.ToInt32(Amount));
+            model.Convert(2, 5);
             return View("Index", model);
         }
 
