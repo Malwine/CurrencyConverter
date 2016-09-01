@@ -18,7 +18,7 @@ namespace CurrencyConverter.Controllers
         public IActionResult Create(string Amount)
         {
             var model = new CurrencyConverter.Models.Amount(Convert.ToInt32(Amount));
-            model.Convert(2, 5);
+            model.Convert(2, 5); // exchange numbers for input from dropdowns
             return View("Index", model);
         }
 
