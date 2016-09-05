@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model CurrencyConverter.Models.Amount
+@model CurrencyConverter.Models.Conversion
 
 <div>
     <p class="lead">This is a currency conversion app. Please type in your amount and select your currencies.</p>
@@ -15,15 +15,19 @@
     </div>
     <div>
         <label for="original_currency">Original Currency</label>
-        <select id="original_currency" name="original_currency">
-            <option></option>
+        <select id="originalCurrency" name="originalCurrency">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
         </select>
     </div>
 
     <div>
         <label for="target_currency">Target Currency</label>
-        <select id="target_currency" name="target_currency">
-            <option></option>
+        <select id="targetCurrency" name="targetCurrency">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
         </select>
     </div>
     <br>
@@ -34,4 +38,4 @@
 </form>
 
 
-<p>@Model.BaseAmount</p>
+<p>@Model.Amount</p>
