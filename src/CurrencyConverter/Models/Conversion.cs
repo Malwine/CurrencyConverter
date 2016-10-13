@@ -16,7 +16,6 @@ namespace CurrencyConverter.Models
             this.Amount = amount;
             this.FirstRate = firstRate;
             this.SecondRate = secondRate;
-
         }
 
         public void Convert()
