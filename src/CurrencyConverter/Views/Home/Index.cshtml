@@ -16,20 +16,22 @@
     <div>
         <label for="original_currency">Original Currency</label>
         <select id="originalCurrency" name="originalCurrency">
-@{ foreach (var cur in Rates.AllCurrencies())
-    {
-        <option>@cur</option>
-    }
-}
+            @{ foreach (var cur in Rates.AllCurrencies())
+                {
+                    <option>@cur</option>
+                }
+            }
         </select>
     </div>
 
     <div>
         <label for="target_currency">Target Currency</label>
         <select id="targetCurrency" name="targetCurrency">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+            @{ foreach (var cur in Rates.AllCurrencies())
+                {
+                    <option>@cur</option>
+                }
+            }
         </select>
     </div>
     <br>

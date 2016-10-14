@@ -11,11 +11,11 @@ namespace CurrencyConverter.Models
         public float FirstRate;
         public float SecondRate;
 
-        public Conversion(int amount, string firstCurrency, int secondCurrency)
+        public Conversion(int amount, string firstCurrency, string secondCurrency)
         {
             this.Amount = amount;
             this.FirstRate = Rates.FindRateFor(firstCurrency);
-            this.SecondRate = secondCurrency;
+            this.SecondRate = Rates.FindRateFor(secondCurrency);
         }
 
         public void Convert()

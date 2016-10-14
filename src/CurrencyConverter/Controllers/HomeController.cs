@@ -11,7 +11,7 @@ namespace CurrencyConverter.Controllers
         public IActionResult Index()
         {
             // TODO: find better solution in order to not get a null pointer exception:
-            var model = new CurrencyConverter.Models.Conversion(0, "EUR", 1);
+            var model = new Models.Conversion(0, "EUR", "EUR");
             return View("Index", model);
         }
 
@@ -19,10 +19,10 @@ namespace CurrencyConverter.Controllers
         {
             var amount = Convert.ToInt32(Amount);
             var originalCur = originalCurrency;
-            var targetCur = Convert.ToInt32(targetCurrency);
+            var targetCur = targetCurrency;
 
-            var model = new CurrencyConverter.Models.Conversion(amount, originalCur, targetCur);
-            model.Convert(); // exchange numbers for input from dropdowns
+            var model = new Models.Conversion(amount, originalCur, targetCur);
+            model.Convert();
             return View("Index", model);
         }
 
