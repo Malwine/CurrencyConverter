@@ -1,5 +1,6 @@
 ﻿{
   "userSecretsId": "aspnet5-CurrencyConverter-30641357-2622-45dc-8fe9-ee6df3f2a532",
+  "webroot": "wwwroot",
   "version": "1.0.0-*",
   "compilationOptions": {
     "emitEntryPoint": true

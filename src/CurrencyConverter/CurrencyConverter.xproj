@@ -14,6 +14,7 @@
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
     <ApplicationInsightsResourceId>/subscriptions/1298bed5-dc91-41f3-8ba8-335757ce8751/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/CurrencyConverter</ApplicationInsightsResourceId>
+    <DevelopmentServerPort>29276</DevelopmentServerPort>
   </PropertyGroup>
   <ItemGroup>
     <DnxInvisibleContent Include="bower.json" />
